@@ -1,41 +1,36 @@
-import React, { useState } from "react";
+import React, {useState} from "react";
 
-const App = () => {
-  const [task, setTask] = useState("");
-  const [list, setList] = useState([]);
+function App() {
+  const [text, setText] = useState("");
+  const [items, setItems] = useState([]);
 
-  const addTask = () => {
-    if (task.trim()) {
-      setList([...list, task]);
-      setTask("");
+  function add() {
+    if (text !== "") {
+      setItems([...items, text]);
+      setText("");
     }
-  };
+  }
 
-  const removeTask = (index) => {
-    const updatedList = list.filter((_, i) => i !== index);
-    setList(updatedList);
-  };
+  function remove(i) {
+    let copy = [...items];
+    copy.splice(i, 1);
+    setItems(copy);
+  }
 
   return (
-    <div className="con1">
-      <h3>Todo App</h3>
-      <input
-        value={task}
-        onChange={(e) => setTask(e.target.value)}
-        placeholder="Enter Your Task"
-      />
-      <button onClick={addTask} className="sumbit">sumbit</button>
+    <div className="cont">
+      <h1 className="title">Todo</h1>
+      <input value={text} onChange={(e) => setText(e.target.value)} className="input" />
+      <button onClick={add} className="add">Add</button>
 
-      <div className="display">
-        {list.map((item, i) => (
-          <div key={i} className="xyz">
-            <p>{item}</p>
-            <button onClick={() => removeTask(i)}>Remove</button>
-          </div>
-        ))}
-      </div>
+      {items.map((item, i) => (
+        <div key={i} className="con">
+          {item}
+          <button onClick={() => remove(i)} className="btn">X</button>
+        </div>
+      ))}
     </div>
   );
-};
+}
 
 export default App;
