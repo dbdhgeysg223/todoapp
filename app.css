@@ -1,77 +1,66 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body{
-    height: 100vh;
-    width: 100vw;
-    overflow: hidden;
-    background: #eee;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+body {
+  font-family: sans-serif;
+  background-color: #eee;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.con1 {
-    height: 50vh;
-    width: 25vw;
-    border-radius: 8px;
-    box-shadow: 5px 10px 12px rgba(0, 0, 0, 0.315);
-    border-left: 1px solid rgba(0, 0, 0, 0.363);
-    border-top: 1px solid rgba(0, 0, 0, 0.363);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding: 2%;
+.cont {
+  background: white;
+  width: 40vw;
+  padding: 3%;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1.2vh;
 }
 
-h3{
-    font-family: sans-serif;
-    font-size: 2vw;
-    text-align: center;
+.title {
+  text-align: center;
+  color: #333;
 }
 
-input {
-    padding: .6vw 1.2vw;
-    width: 75%;
-    font-family: sans-serif;
-    border-radius: 10vw;
-    outline: none;
-    border: 1px solid rgba(0, 0, 0, 0.574);
+.input {
+  padding: 8px;
+  font-size: 14px;
+  width: 100%;
 }
 
-.sumbit {
-    width: 75%;
-    padding: .6vw .1vh;
-    border-radius: 10vw;
-    outline: none;
-    border: none;
-    background-color: rgb(0, 0, 0);
-    color: white;
-    margin-top: 1vh;
+.add {
+  padding: 8px;
+  width: 100%;
+  color: white;
+  background: #000;
 }
 
-
-.display {
-    height: 30%;
-    margin-top: 2vh;
-    width: 100%;
-    /* background-color: aqua; */
-    display: flex;
-    flex-direction: column;
-    gap: 1.2vh;
-    overflow: auto;
-    overflow-x: hidden;
+.con {
+  width: 100%;
+  padding: 9px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid rgba(0, 0, 0, 0.527);
 }
 
-.xyz{
-    padding: 1.2vw 1.2vw;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border: 1px solid rgba(0, 0, 0, 0.518);
-    border-radius: 8px;
+.btn {
+  border: none;
+  outline: none;
+
+  color: white;
+  background: #000;
+  padding: 3px 10px;
+  border-radius: 6px;
 }
